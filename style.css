@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsl(216, 50%, 16%);
+  padding: 2rem 2rem 3rem;
+  border-radius: 15px;
+  width: 37.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* IMAGE SECTION*/
+.image {
+  width: 100%;
+  height: 33.5rem;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.image::before {
+  content: "";
+  width: 100%;
+  height: 33.5rem;
+  background: hsla(178, 100%, 50%, 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  transition: all 0.2s;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.equilibrium {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.image:hover::before {
+  background: hsla(178, 100%, 50%, 0.5);
+}
+
+.image:hover > .view {
+  opacity: 1;
+}
+
+/* CONTENT SECTION*/
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.heading:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.content-text {
+  font-size: 1.8rem;
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 2px solid hsl(215, 32%, 27%);
+  padding-bottom: 2rem;
+  font-weight: 400;
+}
+
+.data div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+}
+
+.ethereum {
+  color: hsl(178, 100%, 50%);
+}
+
+.clock {
+  color: hsl(215, 51%, 70%);
+}
+
+/* AVATAR SECTION */
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar img {
+  width: 5rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.avatar p {
+  font-size: 1.8rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.avatar span {
+  color: hsl(0, 0%, 100%);
+  margin-left: 0.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.avatar span:hover {
+  color: hsl(178, 100%, 50%);
+}
