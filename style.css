@@ -79,14 +79,15 @@ body {
   gap: 1.5rem;
 }
 
-.info {
+/* .info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-}
+} */
 
 .heading {
+  margin-right: auto;
   font-size: 2.4rem;
   font-weight: 600;
   cursor: pointer;
